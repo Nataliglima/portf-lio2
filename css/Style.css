@@ -1,0 +1,405 @@
+/* Importar a fonte "Poppins" do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Variáveis de cores principais */
+:root {
+    --main-color: #007BFF; /* cor principal */
+    --text-color: #ffffff;
+    --bg-color01: #17242d;
+    --bg-color02: #343A40;
+    --color-00: #0000001a;
+    /* extras */
+    --color-01: #4800f1; /* Cor dos ícones de mídia social */
+    --color-02: #009539;
+    --color-03: #232323;
+}
+
+/* ==========================
+   Reset de Estilo Global
+   ========================== */
+   * {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth; /* Rolagem suave */
+}
+
+/* ==========================
+   Estilos Globais
+   ========================== */
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-color01);
+    color: var(--text-color);
+}
+
+/* ==========================
+   Header (Cabeçalho) e Menu
+   ========================== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.1rem;
+    background-color: var(--bg-color01);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border: solid 1px var(--bg-color02);
+}
+
+/* Estilo para o Logo */
+.logo {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+/* Estilo para os Links de Navegação */
+.nav a {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    transition: color 0.4s;
+    border: solid 1px var(--bg-color02);
+}
+
+.nav a:hover {
+    color: var(--main-color);
+}
+
+/* ==========================
+   Estilos de Seções Gerais
+   ========================== */
+section {
+    min-height: 100vh;
+    padding: 6rem 6rem 2rem;
+    border: solid 1px  var(--bg-color02);
+}
+
+/* Estilo para Span (destaques) */
+span {
+    color: var(--main-color);
+}
+
+/* ==========================
+   Seção "Quem Sou"
+   ========================== */
+   .quem-sou {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; 
+    align-items: center;
+    
+}
+.quem-sou-img img{
+    width: 100%;
+
+}
+.quem-sou-img {
+    border-right: 0.3rem solid var(--main-color); 
+    border-bottom: 0.3rem solid var(--main-color);
+    border-image: linear-gradient(135deg, transparent 50%, var(--main-color)) 1;
+}
+
+
+
+.quem-sou-content {
+    width: 45%; 
+}
+
+.quem-sou-content h1 {
+    font-weight: 700rem;
+    line-height: 1.3;
+    
+  
+}
+
+.quem-sou-content p {
+    
+    margin-top: 1.2rem;
+    text-align: justify;
+}
+
+/* ==========================
+   Social Media (Redes Sociais)
+   ========================== */
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.3rem;
+    height: 2.3rem;
+    border: solid 0.15rem var(--main-color);
+    border-radius: 60%;
+    font-size: 1.3rem;
+    color: var(--main-color);
+    margin: 0 0.5rem;
+    transition: 0.3s ease;
+}
+
+.social-media a:hover {
+    background-color: var(--main-color);
+    color: var(--bg-color02);
+    box-shadow: 0 0 0.3rem var(--main-color);
+}
+
+
+/* ==========================
+   Formação Acadêmica
+   ========================== */
+
+.formacao-academica h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+   
+     
+}
+
+.formacao-academica-content {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Estilo de cada card */
+.formacao-academica-card {
+    background-color: var(--main-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    max-width: 200px;
+    min-height: 200px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding: 1rem;  
+    box-sizing: border-box;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formacao-academica-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do título dos cards */
+.formacao-academica-card h3 {
+    font-weight: 400rem;
+    font-size:1.5rem ;
+    justify-content: center
+       
+}
+
+/* Estilo dos parágrafos */
+.formacao-academica-card p {
+    margin-top: 1.2rem;
+   text-align: justify;
+    color: var(--text-color);
+}
+
+
+/* ==========================
+   Portfólio
+   ========================== */
+   .portfolio {
+    background-color: var(--bg-color02);
+}
+.portfolio h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+   
+     
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; /* Centraliza verticalmente */
+    
+    
+    height: 70vh; 
+}
+
+.portfolio-box {
+    position: relative;
+    border-radius: 0.6rem;
+    box-shadow: 0 0 0.6rem var(--bg-color01);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px; 
+    height: 300px; 
+}
+
+.portfolio-box img {
+    width: 100%; /* Ajusta a largura da imagem para preencher a caixa */
+    height: auto; /* Mantém a proporção da imagem */
+    transition: 0.3s ease;
+}
+
+.portfolio-box img:hover {
+    transform: scale(1.1);
+}
+
+.portfolio-box .portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 5rem;
+    transform: translateY(100%); 
+    transition: 0.5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer {
+    transform: translateY(0); 
+}
+
+.portfolio-layer h4 {
+    font-size: 1rem;
+    
+    
+}
+
+.portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--text-color);
+    border-radius: 50%;
+}
+
+.portfolio-layer p {
+    margin: 0.2rem 0 0.5rem;
+}
+
+/* Ícone */
+.portfolio-layer a i {
+    font-size: 1.2rem;
+    color: var(--bg-color01);
+}
+
+
+
+/* ===== Contato ===== */
+    .contato h2 {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+     
+}
+form {
+    max-width: 30rem; 
+    margin: 0.6rem auto; 
+    text-align: center; 
+    margin-bottom: 2rem; 
+
+}
+    
+
+/* Estilo para os campos de entrada dentro do .input-box */
+form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+/* Estilo para o campo de texto */
+form .input-box input,
+form textarea {
+    width: 100%; 
+    padding: 0.4rem;
+    font-size: 1rem; 
+    color: #fffdfd; 
+    background-color: #525353; 
+    border-radius: 0.5rem; 
+    margin: 0.4rem 0;
+
+}
+
+form textarea {
+    resize: none;
+}
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--main-color);
+    border-radius: 2rem;
+    color: var(--bg-color02);
+    letter-spacing: 0.1rem;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn:hover {
+    box-shadow: 0 0.3rem;
+    background-color: inherit;
+    color: var(--main-color);
+}
+
+
+
+/* ==========================
+   Rodapé
+   ========================== */
+footer {
+    padding: 1rem 0;
+    text-align: center;
+    background-color: #000000;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+    
+    
+  
+  
+    
+    
+
+    
+
+
+
+
+
+    
+    
+
+    
+
+    
+
+    
+    
+
+ 
+ 
